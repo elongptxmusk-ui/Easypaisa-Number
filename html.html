@@ -1,0 +1,37 @@
+
+<div style="display:flex;justify-content:center;padding:1.5rem 0;">
+  <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:2rem 1.5rem;max-width:340px;width:100%;text-align:center;">
+
+    <div style="width:56px;height:56px;border-radius:50%;background:var(--color-background-secondary);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
+      <i class="ti ti-device-mobile" style="font-size:28px;color:var(--color-text-secondary);" aria-hidden="true"></i>
+    </div>
+
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 0.5rem;">Easypaisa Number</p>
+    <p style="font-size:28px;font-weight:500;color:var(--color-text-primary);margin:0 0 1.5rem;letter-spacing:1px;">0328-3379271</p>
+
+    <button onclick="
+      navigator.clipboard.writeText('03283379271').then(function(){
+        var btn = document.getElementById('main-copy-btn');
+        var icon = document.getElementById('main-icon');
+        var label = document.getElementById('btn-label');
+        btn.style.background='var(--color-background-success)';
+        btn.style.borderColor='var(--color-border-success)';
+        btn.style.color='var(--color-text-success)';
+        icon.className='ti ti-check';
+        label.textContent='Copied!';
+        setTimeout(function(){
+          btn.style.background='var(--color-background-primary)';
+          btn.style.borderColor='var(--color-border-secondary)';
+          btn.style.color='var(--color-text-primary)';
+          icon.className='ti ti-copy';
+          label.textContent='Number Copy Karein';
+        },2500);
+      });
+    " id="main-copy-btn" style="width:100%;padding:0.75rem 1rem;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);font-size:15px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all 0.2s;">
+      <i id="main-icon" class="ti ti-copy" style="font-size:18px;" aria-hidden="true"></i>
+      <span id="btn-label">Number Copy Karein</span>
+    </button>
+
+    <p style="font-size:11px;color:var(--color-text-tertiary);margin:1rem 0 0;">BILAL HUSSAIN &nbsp;·&nbsp; Easypaisa</p>
+  </div>
+</div>
